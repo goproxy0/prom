@@ -1,0 +1,15 @@
+build/
+cache/
+*.db
+*.exe
+*.exe~
+*.key
+*.user.json
+addto-startup.vbs
+prom.log
+prom.log.*.gz
+prom.sh
+promgui.exe
+proxy.pac
+Prom.crt
+Prom.key
