@@ -71,7 +71,7 @@ func main() {
 	}
 
 	fmt.Fprintf(os.Stderr, `------------------------------------------------------
-Prom Version    : %s (go/%s %s/%s)`,
+Prom Version       : %s (go/%s %s/%s)`,
 		version, gover, runtime.GOOS, runtime.GOARCH)
 	for profile, config := range config {
 		if !config.Enabled {
@@ -90,7 +90,7 @@ Prom Version    : %s (go/%s %s/%s)`,
 			addr = net.JoinHostPort(ip, port)
 		}
 		fmt.Fprintf(os.Stderr, `
-Prom Profile    : %s
+Prom Profile       : %s
 Listen Address     : %s
 Enabled Filters    : %v`,
 			profile,
@@ -130,7 +130,7 @@ GAE Mode           : TLS`)
 					urls = append(urls, s.URL)
 				}
 				fmt.Fprintf(os.Stderr, `
-PHP Servers         : %s`, strings.Join(urls, "|"))
+PHP Servers        : %s`, strings.Join(urls, "|"))
 			}
 		}
 		go httpproxy.ServeProfile(config, "prom "+version)
